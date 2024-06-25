@@ -7,8 +7,8 @@
   - IIS Express
   - Container (Dockerfile)
 - Staging:
-  - Refer to [Publish to Docker](#publish-up-docker)
-  - Refer to [Publish to IIS](#publish-up-iis)
+  - Refer to [Publish to Docker](#publish-to-docker)
+  - Refer to [Publish to IIS](#publish-to-iis)
 - Production:
   - https://lamkhai.azurewebsites.net/
 
@@ -21,11 +21,9 @@
 	docker build -t lamkhai/lamkhai.com .
 	```
   - Run:
-	- Development (Without using compose):
-	  - Run via Container (Dockerfile) or via the following command:
-	    ```
-	    docker run --name=LK-Cli -p 8080 -e ASPNETCORE_ENVIRONMENT=Staging lamkhai/lamkhai.com
-	    ```
+	```
+	docker run --name=LK-Cli -p 8080 -e ASPNETCORE_ENVIRONMENT=Staging lamkhai/lamkhai.com
+	```
 
 ## Publish to IIS:
 Use:
