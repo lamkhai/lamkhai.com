@@ -1,4 +1,18 @@
 # LK
+
+## Environments:
+- Development:
+  - http
+  - https
+  - IIS Express
+  - Container (Dockerfile)
+- Staging:
+  - Refer to [Publish to Docker](#publish-up-docker)
+  - Refer to [Publish to IIS](#publish-up-iis)
+- Production:
+  - https://lamkhai.azurewebsites.net/
+
+## Publish to Docker:
 - OS: Linux
 - Docker hub: https://hub.docker.com/r/lamkhai/lamkhai.com
 - Docker client:
@@ -10,5 +24,10 @@
 	- Development (Without using compose):
 	  - Run via Container (Dockerfile) or via the following command:
 	    ```
-	    docker run --name=LK-Cli -p 8080 -e ASPNETCORE_ENVIRONMENT=Development lamkhai/lamkhai.com
-	    ``` 
+	    docker run --name=LK-Cli -p 8080 -e ASPNETCORE_ENVIRONMENT=Staging lamkhai/lamkhai.com
+	    ```
+
+## Publish to IIS:
+Use:
+- FolderProfile
+- IISProfile
